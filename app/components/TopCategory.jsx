@@ -30,7 +30,7 @@ const TopCategorySlider = () => {
     <h2 className="slider-title">Top Categories</h2>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      spaceBetween={10}
+      spaceBetween={9}
       slidesPerView={4}
       loop={true}
       navigation
