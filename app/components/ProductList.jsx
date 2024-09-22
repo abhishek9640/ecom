@@ -161,7 +161,7 @@ const ProductCard = ({ product }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Col className="mb-4 ">
+    <Col className="mb-4 cards">
       <Card
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -181,7 +181,7 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="rating position-absolute"
            style={{
-            top: "420px",
+            top: "485px",
             left: "10px",
             zIndex: 1,
             

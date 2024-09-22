@@ -10,6 +10,9 @@
 .product-grid {
   transition: opacity 0.3s ease-in-out;
 }
+.cards{
+  padding: 0.35% !important
+}
 
 .fade-in {
   opacity: 1;

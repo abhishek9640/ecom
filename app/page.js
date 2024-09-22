@@ -7,9 +7,9 @@ export default function HomePage() {
     <div>
       <BannerSlider />
       {/* Add other content below the slider */}
-      <div className="container mt-4">
+      <div className="mt-4 m-5">
       <ProductList />
-      <CategorySlider />
+    <CategorySlider />
     </div>
     </div>
   );
