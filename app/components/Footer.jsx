@@ -36,18 +36,15 @@ const Footer = () => {
         <div className="footer-column">
           <h3>CONTACT US</h3>
           <p>Reach out to us on WhatsApp!</p>
-          <p>Or, you can call our helpline:<br />Phone - +917969006900</p>
+          <p>Or, you can call our helpline:<br />Phone - +91999999999</p>
           <p>Working Hours - 10 AM to 6 PM, Mon to Sat</p>
         </div>
         
         <div className="footer-column">
-          <h3>FREAKINS STORE</h3>
+          <h3>PUELLA STORE</h3>
           <p>Visit us at:</p>
-          <p>A, Ground Floor, Gurumukh Sagar, Plot 126, 29th Rd,<br />opposite H&M Tower, Bandra West, Mumbai, Maharashtra 400050</p>
+          <p>A, Ground Floor, Faridabad, Sector 19, 29th Rd,<br />opposite H&M Tower, Bandra West, Mumbai, Maharashtra 400050</p>
         </div>
-      </div>
-      <div className="footer-bottom">
-        <p>© FREAKINS</p>
       </div>
     </footer>
   );
