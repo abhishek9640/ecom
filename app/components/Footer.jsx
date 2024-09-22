@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="footer-column">
           <h3>PUELLA STORE</h3>
           <p>Visit us at:</p>
-          <p>A, Ground Floor, Faridabad, Sector 19, 29th Rd,<br />opposite H&M Tower, Bandra West, Mumbai, Maharashtra 400050</p>
+          <p>A, Ground Floor, Sector 19, 29th Rd,<br />opposite Tower, Faridabad, Haryana 110054</p>
         </div>
       </div>
     </footer>
