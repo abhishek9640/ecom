@@ -24,7 +24,7 @@ const products = [
     discount: "22% OFF",
     rating: 4.8,
     image:
-      "https://freakins.com/cdn/shop/files/PALI9Feb-1728-Edit.jpg?v=1708947872&width=800",
+      "https://freakins.com/cdn/shop/files/PALI9Feb-1776.jpg?v=1708947872&width=800",
     category: "Korean Pants",
   },
   {
@@ -190,7 +190,7 @@ const ProductCard = ({ product }) => {
           <span className="me-1">{product.rating}⭐</span>
         </div>
 
-        <div style={{ position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "relative", overflow: "hidden", borderRadius: "15px"  }}>
           <Card.Img
             variant="top"
             src={hovered ? hoverImages[product.id] : product.image}
@@ -223,9 +223,6 @@ const ProductCard = ({ product }) => {
                 ₹{product.originalPrice}
               </span>
             </div>
-            {/* <div className="d-flex align-items-center mt-2">
-              <span className="me-1">{product.rating}⭐</span>
-            </div> */}
           </div>
         </Card.Body>
       </Card>
