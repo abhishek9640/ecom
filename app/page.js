@@ -1,5 +1,6 @@
 import BannerSlider from './components/BannerSlider';
 import ProductList from './components/ProductList';
+import CategorySlider from './components/TopCategory';
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       {/* Add other content below the slider */}
       <div className="container mt-4">
       <ProductList />
+      <CategorySlider />
     </div>
     </div>
   );

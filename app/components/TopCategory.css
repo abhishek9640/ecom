@@ -1,0 +1,89 @@
+/* TopCategory.css */
+.slider-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .slider-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .category-swiper {
+    padding: 20px 0;
+  }
+  
+  .category-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category-item {
+    position: relative;
+  }
+  
+  .category-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* transition: transform 0.3s ease; */
+  }
+  
+  /* .category-image:hover {
+    transform: scale(1.05);
+  } */
+  
+  
+/* Hide default Swiper buttons and only show the background image */
+.swiper-button-next, .swiper-button-prev {
+    background-size: contain; /* Ensure the background image fits inside the button */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px; /* You can adjust the width as per the arrow image size */
+    height: 40px; /* You can adjust the height as per the arrow image size */
+    color: transparent; /* Hide the default arrow icon text */
+    opacity: 0.8;
+  }
+  
+  /* Custom background for the previous arrow */
+  .swiper-button-prev {
+    left: 2%; /* Adjust positioning */
+    background-image: url(https://freakins.com/cdn/shop/files/left.png?v=1689918653); /* Left arrow image */
+  }
+  
+  /* Custom background for the next arrow */
+  .swiper-button-next {
+    right: 2%; /* Adjust positioning */
+    background-image: url(https://freakins.com/cdn/shop/files/right.png?v=1689918652); /* Right arrow image */
+  }
+  
+  /* Optional: Style adjustments on hover */
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    opacity: 0.5; /* Add hover effect to the arrow */
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    .category-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category-title {
+      font-size: 1rem;
+    }
+  }
+
+  
+  

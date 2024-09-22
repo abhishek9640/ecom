@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import NavigationBar from './components/NavigationBar';
 
+
 export const metadata = {
   title: 'Puella',
   description: 'Puella',

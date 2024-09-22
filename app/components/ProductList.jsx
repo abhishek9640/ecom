@@ -161,7 +161,7 @@ const ProductCard = ({ product }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Col xs={6} sm={6} md={3} className="mb-4">
+    <Col className="mb-4 ">
       <Card
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -171,9 +171,10 @@ const ProductCard = ({ product }) => {
         <div
           className="badge bg-danger position-absolute"
           style={{
-            top: "10px",
-            left: "10px",
+            top: "1px",
+            left: "1px",
             zIndex: 1,
+            borderRadius: "10px 0"
           }}
         >
           {product.discount}
@@ -214,9 +215,6 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="d-flex align-items-center mt-2">
               <span className="me-1">{product.rating}⭐</span>
-              <Button variant="outline-dark" size="sm">
-                Add to Cart
-              </Button>
             </div>
           </div>
         </Card.Body>
@@ -246,38 +244,39 @@ const ProductList = () => {
   return (
     <>
       {/* Tab Switcher */}
-      <Nav className="justify-content-center mb-4" variant="pills">
-        <Nav.Item>
-          <Nav.Link
-            className={`nav-border ${
-              activeTab === "Korean Pants" ? "active-tab" : ""
-            }`}
-            onClick={() => handleTabChange("Korean Pants")}
-          >
-            Korean Pants
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link
-            className={`nav-border ${
-              activeTab === "Jeans" ? "active-tab" : ""
-            }`}
-            onClick={() => handleTabChange("Jeans")}
-          >
-            Jeans
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link
-            className={`nav-border ${
-              activeTab === "shorts" ? "active-tab" : ""
-            }`}
-            onClick={() => handleTabChange("shorts")}
-          >
-            Shorts
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
+<Nav className="justify-content-center mb-4" variant="pills">
+  <Nav.Item>
+    <Nav.Link
+      className={`nav-border ${
+        activeTab === "Korean Pants" ? "active-tab" : ""
+      }`}
+      onClick={() => handleTabChange("Korean Pants")}
+    >
+      KOREAN PANTS
+    </Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link
+      className={`nav-border ${
+        activeTab === "Jeans" ? "active-tab" : ""
+      }`}
+      onClick={() => handleTabChange("Jeans")}
+    >
+      JEANS
+    </Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link
+      className={`nav-border ${
+        activeTab === "shorts" ? "active-tab" : ""
+      }`}
+      onClick={() => handleTabChange("shorts")}
+    >
+      SHORTS
+    </Nav.Link>
+  </Nav.Item>
+</Nav>
+
 
       {/* Product Grid with fade effect */}
       <Row className={`product-grid ${fade}`}>
