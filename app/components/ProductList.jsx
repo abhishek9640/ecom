@@ -195,7 +195,13 @@ const ProductCard = ({ product }) => {
           />
         </div>
 
-        <Card.Body style={{ display: "flex", flexDirection: "column", borderRadius: "25px" }}>
+        <Card.Body
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            borderRadius: "25px",
+          }}
+        >
           <Card.Title style={{ flex: "1 0 auto", fontSize: "14px" }}>
             {product.title}
           </Card.Title>
@@ -240,11 +246,12 @@ const ProductList = () => {
   return (
     <>
       {/* Tab Switcher */}
-      {/* Tab Switcher */}
       <Nav className="justify-content-center mb-4" variant="pills">
         <Nav.Item>
           <Nav.Link
-            className={activeTab === "Korean Pants" ? "active-tab" : ""}
+            className={`nav-border ${
+              activeTab === "Korean Pants" ? "active-tab" : ""
+            }`}
             onClick={() => handleTabChange("Korean Pants")}
           >
             Korean Pants
@@ -252,7 +259,9 @@ const ProductList = () => {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
-            className={activeTab === "Jeans" ? "active-tab" : ""}
+            className={`nav-border ${
+              activeTab === "Jeans" ? "active-tab" : ""
+            }`}
             onClick={() => handleTabChange("Jeans")}
           >
             Jeans
@@ -260,7 +269,9 @@ const ProductList = () => {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
-            className={activeTab === "shorts" ? "active-tab" : ""}
+            className={`nav-border ${
+              activeTab === "shorts" ? "active-tab" : ""
+            }`}
             onClick={() => handleTabChange("shorts")}
           >
             Shorts
