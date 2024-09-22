@@ -157,11 +157,12 @@ const hoverImages = {
 };
 
 // Product card component
+// Product card component
 const ProductCard = ({ product }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Col md={3} className="mb-4">
+    <Col xs={6} sm={6} md={3} className="mb-4">
       <Card
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -219,6 +220,7 @@ const ProductCard = ({ product }) => {
     </Col>
   );
 };
+
 
 // Main ProductList component
 const ProductList = () => {
