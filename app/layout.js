@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavigationBar';
 
 export const metadata = {
-  title: 'Freakins Clone',
-  description: 'A Freakins clone with Next.js 14, slider, and navbar',
+  title: 'Puella',
+  description: 'Puella',
 };
 
 export default function RootLayout({ children }) {
