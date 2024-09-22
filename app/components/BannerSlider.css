@@ -13,12 +13,12 @@
 
 .slick-dots li {
   flex-grow: 1; /* Allow the line segments to grow and fill the space */
-  height: 3px; /* Thickness of the line */
+  height: 2.4px; /* Thickness of the line */
   margin: 0 10px; /* Spacing between the segments */
   background-color: rgba(255, 255, 255, 0.2); /* Default background color with lower opacity */
   position: relative;
   overflow: hidden;
-  width: 65px;
+  width: 55px;
 }
 
 .slick-dots li.slick-active {

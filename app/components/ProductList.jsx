@@ -22,7 +22,7 @@ const products = [
     price: 1799,
     originalPrice: 2299,
     discount: "22% OFF",
-    rating: 4.82,
+    rating: 4.8,
     image:
       "https://freakins.com/cdn/shop/files/PALI9Feb-1728-Edit.jpg?v=1708947872&width=800",
     category: "Korean Pants",
@@ -33,7 +33,7 @@ const products = [
     price: 1399,
     originalPrice: 2299,
     discount: "39% OFF",
-    rating: 4.71,
+    rating: 4.7,
     image:
       "https://freakins.com/cdn/shop/files/28june_9652-Edit_356b1273-a3db-4bdd-912d-96bf5c210280.jpg?v=1720438924&width=800",
     category: "Korean Pants",
@@ -99,7 +99,7 @@ const products = [
     price: 1799,
     originalPrice: 2299,
     discount: "22% OFF",
-    rating: 4.82,
+    rating: 4.1,
     image:
       "https://freakins.com/cdn/shop/files/Curve00324-Edit.jpg?v=1686583610&width=800",
     category: "shorts",
@@ -110,7 +110,7 @@ const products = [
     price: 1899,
     originalPrice: 2499,
     discount: "24% OFF",
-    rating: 4.8,
+    rating: 4.1,
     image:
       "https://freakins.com/cdn/shop/files/09-june-2024_7249.jpg?v=1718350367&width=800",
     category: "shorts",
@@ -121,7 +121,7 @@ const products = [
     price: 1599,
     originalPrice: 2099,
     discount: "24% OFF",
-    rating: 4.7,
+    rating: 4.1,
     image:
       "https://freakins.com/cdn/shop/files/09june2024_6435-Edit_d50dff53-a5a9-47ee-b796-6503ae66e0e6.jpg?v=1719336495&width=800",
     category: "shorts",
@@ -132,7 +132,7 @@ const products = [
     price: 1499,
     originalPrice: 1999,
     discount: "25% OFF",
-    rating: 4.9,
+    rating: 4.1,
     image:
       "https://freakins.com/cdn/shop/files/09-JUNE-PART-2_8292.jpg?v=1718192061&width=800",
     category: "shorts",
@@ -157,7 +157,6 @@ const hoverImages = {
 };
 
 // Product card component
-// Product card component
 const ProductCard = ({ product }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -167,7 +166,7 @@ const ProductCard = ({ product }) => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="position-relative product-card"
-        style={{ overflow: "hidden", height: "100%" }} // Ensure each card occupies full height
+        style={{ overflow: "hidden", height: "100%" }}
       >
         <div
           className="badge bg-danger position-absolute"
@@ -186,8 +185,7 @@ const ProductCard = ({ product }) => {
             src={hovered ? hoverImages[product.id] : product.image}
             alt={product.title}
             style={{
-              borderBottomLeftRadius: "12px",
-              borderBottomRightRadius: "12px",
+              borderRadius: "15px",
               width: "100%",
               objectFit: "cover",
               transition: "opacity 0.7s ease, transform 0.7s ease",
@@ -197,7 +195,7 @@ const ProductCard = ({ product }) => {
           />
         </div>
 
-        <Card.Body style={{ display: "flex", flexDirection: "column" }}>
+        <Card.Body style={{ display: "flex", flexDirection: "column", borderRadius: "25px" }}>
           <Card.Title style={{ flex: "1 0 auto", fontSize: "14px" }}>
             {product.title}
           </Card.Title>
@@ -221,27 +219,27 @@ const ProductCard = ({ product }) => {
   );
 };
 
-
 // Main ProductList component
 const ProductList = () => {
   const [activeTab, setActiveTab] = useState("Korean Pants"); // Manage the active tab
-  const [transitionClass, setTransitionClass] = useState(""); // Manage the slider transition class
+  const [fade, setFade] = useState("fade-in"); // Manage fade classes
 
   const filteredProducts = products.filter(
     (product) => product.category === activeTab
   );
 
   const handleTabChange = (category) => {
-    // Add sliding animation on tab switch
-    setTransitionClass("slide-out"); // Slide out the current products
+    setFade("fade-out"); // Start fade out
+
     setTimeout(() => {
-      setActiveTab(category); // Change the active category after slide out
-      setTransitionClass("slide-in"); // Slide in the new products
-    }, 200); // Delay the tab change to sync with animation duration
+      setActiveTab(category); // Change the active category
+      setFade("fade-in"); // Start fade in
+    }, 220); // Delay for fade-out duration
   };
 
   return (
     <>
+      {/* Tab Switcher */}
       {/* Tab Switcher */}
       <Nav className="justify-content-center mb-4" variant="pills">
         <Nav.Item>
@@ -270,8 +268,8 @@ const ProductList = () => {
         </Nav.Item>
       </Nav>
 
-      {/* Product Grid with slider effect */}
-      <Row className={`product-grid ${transitionClass}`}>
+      {/* Product Grid with fade effect */}
+      <Row className={`product-grid ${fade}`}>
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

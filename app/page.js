@@ -8,10 +8,10 @@ export default function HomePage() {
       <BannerSlider />
       {/* Add other content below the slider */}
       <div className="container mt-4">
-      <h1 className="text-center mb-4">Our Collection</h1>
+      {/* <h1 className="text-center mb-4">Our Collection</h1> */}
       <ProductList />
     </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
