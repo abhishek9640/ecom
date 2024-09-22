@@ -1,0 +1,33 @@
+.product-grid {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .slide-out {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  .slide-in {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .product-grid.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .active-tab {
+    background-color: black !important;
+    color: white !important;
+  }
+  
+  .nav-link {
+    color: black;
+  }
+  
+  .nav-link:hover {
+    color: black;
+  }
+  
+  
