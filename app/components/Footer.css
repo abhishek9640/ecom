@@ -1,0 +1,91 @@
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* Footer Columns */
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Social Links */
+  .social-links {
+    display: flex;
+  }
+  
+  .social-icon {
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    background-color: #ccc;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column {
+      margin-bottom: 30px;
+    }
+  }
+  
