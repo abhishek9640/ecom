@@ -76,6 +76,18 @@ button {
   color: white;
 }
 
+.rating {
+  font-size: 14px;
+  border: 1px solid beige;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background-color: #f5f5dc; /* Beige color */
+  color: #000; /* Black text */
+  display: flex;
+  align-items: center;
+}
+
+
 /* Active tab styling */
 .active-tab {
   background-color: black !important;

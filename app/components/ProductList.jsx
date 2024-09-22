@@ -174,10 +174,20 @@ const ProductCard = ({ product }) => {
             top: "1px",
             left: "1px",
             zIndex: 1,
-            borderRadius: "10px 0"
+            borderRadius: "10px 0",
           }}
         >
           {product.discount}
+        </div>
+        <div className="rating position-absolute"
+           style={{
+            top: "420px",
+            left: "10px",
+            zIndex: 1,
+            
+          }}
+        >
+          <span className="me-1">{product.rating}⭐</span>
         </div>
 
         <div style={{ position: "relative", overflow: "hidden" }}>
@@ -213,9 +223,9 @@ const ProductCard = ({ product }) => {
                 ₹{product.originalPrice}
               </span>
             </div>
-            <div className="d-flex align-items-center mt-2">
+            {/* <div className="d-flex align-items-center mt-2">
               <span className="me-1">{product.rating}⭐</span>
-            </div>
+            </div> */}
           </div>
         </Card.Body>
       </Card>
@@ -244,39 +254,38 @@ const ProductList = () => {
   return (
     <>
       {/* Tab Switcher */}
-<Nav className="justify-content-center mb-4" variant="pills">
-  <Nav.Item>
-    <Nav.Link
-      className={`nav-border ${
-        activeTab === "Korean Pants" ? "active-tab" : ""
-      }`}
-      onClick={() => handleTabChange("Korean Pants")}
-    >
-      KOREAN PANTS
-    </Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link
-      className={`nav-border ${
-        activeTab === "Jeans" ? "active-tab" : ""
-      }`}
-      onClick={() => handleTabChange("Jeans")}
-    >
-      JEANS
-    </Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link
-      className={`nav-border ${
-        activeTab === "shorts" ? "active-tab" : ""
-      }`}
-      onClick={() => handleTabChange("shorts")}
-    >
-      SHORTS
-    </Nav.Link>
-  </Nav.Item>
-</Nav>
-
+      <Nav className="justify-content-center mb-4" variant="pills">
+        <Nav.Item>
+          <Nav.Link
+            className={`nav-border ${
+              activeTab === "Korean Pants" ? "active-tab" : ""
+            }`}
+            onClick={() => handleTabChange("Korean Pants")}
+          >
+            KOREAN PANTS
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link
+            className={`nav-border ${
+              activeTab === "Jeans" ? "active-tab" : ""
+            }`}
+            onClick={() => handleTabChange("Jeans")}
+          >
+            JEANS
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link
+            className={`nav-border ${
+              activeTab === "shorts" ? "active-tab" : ""
+            }`}
+            onClick={() => handleTabChange("shorts")}
+          >
+            SHORTS
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
 
       {/* Product Grid with fade effect */}
       <Row className={`product-grid ${fade}`}>
