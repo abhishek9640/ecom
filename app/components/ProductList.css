@@ -73,6 +73,12 @@ button {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .nav-border {
+  font-size: 8.5px;
+  }
+}
+
 .nav-border:hover {
   background-color: black;
   border-color: black;
